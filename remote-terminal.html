@@ -1,0 +1,98 @@
+<script type="text/javascript">
+    RED.nodes.registerType('remote terminal', {
+        category: 'Things Nodes',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value: ""},
+            L1: {value: false},
+            L2: {value: false},
+            L3: {value: false},
+            L4: {value: false},
+            button1: {value: 0},
+            button2: {value: 0},
+            button3: {value: 0},
+            text1: {value: ""},
+            text2: {value: ""},
+            text3: {value: ""},
+            text4: {value: ""}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function() {
+            return this.name || "remote terminal";
+        },
+        oneditprepare: function() {
+            // prepare the UI when the node is opened for edit
+        },
+        oneditsave: function() {
+            // save values when the node configuration is saved
+        }
+    });
+</script>
+<script type="text/x-red" data-template-name="remote terminal">
+    <!-- <div class="form-row">
+        <label for="node-input-name"><i ></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-L1"><i ></i> Light 1</label>
+        <input type="checkbox" id="node-input-L1">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-L2"><i ></i> Light 2</label>
+        <input type="checkbox" id="node-input-L2">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-L3"><i ></i> Light 3</label>
+        <input type="checkbox" id="node-input-L3">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-L4"><i ></i> Light 4</label>
+        <input type="checkbox" id="node-input-L4">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-button1"><i class="fa fa-hand-o-up"></i> Button 1</label>
+        <input type="number" id="node-input-button1" placeholder="0">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-button2"><i class="fa fa-hand-o-up"></i> Button 2</label>
+        <input type="number" id="node-input-button2" placeholder="0">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-button3"><i class="fa fa-hand-o-up"></i> Button 3</label>
+        <input type="number" id="node-input-button3" placeholder="0">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-text1"><i class="fa fa-font"></i> Text Line 1</label>
+        <input type="text" id="node-input-text1" placeholder="Text line 1">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-text2"><i class="fa fa-font"></i> Text Line 2</label>
+        <input type="text" id="node-input-text2" placeholder="Text line 2">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-text3"><i class="fa fa-font"></i> Text Line 3</label>
+        <input type="text" id="node-input-text3" placeholder="Text line 3">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-text4"><i class="fa fa-font"></i> Text Line 4</label>
+        <input type="text" id="node-input-text4" placeholder="Text line 4">
+    </div> -->
+</script>
+
+
+<script type="text/x-red" data-help-name="remote terminal">
+    <p>Нода-виртуальная вещь, созданная по образу удалённого терминала управления конкурсной площадки Интернет вещей.</p>
+</script>

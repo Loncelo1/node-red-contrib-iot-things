@@ -1,0 +1,36 @@
+    <script type="text/javascript">
+        RED.nodes.registerType('Barcode Reader',{
+            category: 'Things Nodes',
+            color: '#a6bbcf',
+            defaults: {
+                name: {value:""},
+                number: {value: 0, required: true},
+                autoGenerate: {value: false, required: true}
+            },
+            inputs:1,
+            outputs:1,
+            icon: "file.png",
+            label: function() {
+                return this.name||"Barcode Reader";
+            },
+            oneditprepare: function() {
+                var node = this;
+                node.number = node.context().get('number') || node.number; // Загружаем сохраненное число
+            }
+        });
+    </script>
+
+    <script type="text/x-red" data-template-name="Barcode Reader">
+        <div class="form-row">
+            <label for="node-input-number"><i class="icon-tag"></i> Число</label>
+            <input type="number" id="node-input-number" placeholder="Введите число">
+        </div>
+        <div class="form-row">
+            <label for="node-input-autoGenerate"><i class="icon-random"></i> Автогенерация чисел</label>
+            <input type="checkbox" id="node-input-autoGenerate">
+        </div>
+    </script>
+
+    <script type="text/x-red" data-help-name="Barcode Reader">
+        <p>Нода сохраняет и отправляет число, полученное через msg.payload. Если включена автогенерация чисел, она будет генерировать случайное число до 10 знаков.</p>
+    </script>
