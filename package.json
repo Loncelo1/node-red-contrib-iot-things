@@ -1,7 +1,17 @@
 {
   "name" : "node-red-contrib-iot-things",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Коллекция виртуальных вещей IOT",
+  "bugs":
+  {
+  "url": "https://github.com/Loncelo1/node-red-contrib-iot-things",
+  "email": "dimas9171@mail.ru"
+  },
+  "license":
+  {
+    "license":"MIT"
+  },
+  "url": "https://github.com/Loncelo1/node-red-contrib-iot-things",
   "dependencies": {
     "node-red-dashboard":"^3.6.5",
     "node-red-contrib-image-tools":"^2.1.1"
